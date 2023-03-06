@@ -1,0 +1,8 @@
+.sidebar-container {
+  height: 100%;
+  width: 25%;
+  min-width: 250px;
+  padding: 30px;
+  padding-left: 0;
+  background-color: white;
+}

@@ -1,0 +1,9 @@
+.content-area-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
