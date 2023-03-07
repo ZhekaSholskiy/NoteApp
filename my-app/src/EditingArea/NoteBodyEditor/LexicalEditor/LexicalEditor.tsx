@@ -4,7 +4,6 @@ import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
-import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import LexicalErrorBoundary from "@lexical/react/LexicalErrorBoundary";
 import ToolbarPlugin from "./plugins/ToolbarPlugin";
 import { HeadingNode, QuoteNode } from "@lexical/rich-text";
@@ -18,8 +17,6 @@ import { MarkdownShortcutPlugin } from "@lexical/react/LexicalMarkdownShortcutPl
 import { TRANSFORMERS } from "@lexical/markdown";
 import {OnChangePlugin} from '@lexical/react/LexicalOnChangePlugin';
 
-import ListMaxIndentLevelPlugin from "./plugins/ListMaxIndentLevelPlugin";
-import CodeHighlightPlugin from "./plugins/CodeHighlightPlugin";
 import AutoLinkPlugin from "./plugins/AutoLinkPlugin";
 import { useEffect, useRef, useState } from "react";
 import { EditorState } from "lexical";
@@ -64,6 +61,7 @@ export default function LexicalEditor() {
     if (activeNote.id !== uniqActiveNote.id) {
       setUniqActiveNote(activeNote);
     }
+    console.log(activeNote)
   }, [activeNote])
 
   return (
@@ -88,12 +86,9 @@ export default function LexicalEditor() {
               setActiveNote(updatedNote);
             }}/>
           <HistoryPlugin />
-          {/* <AutoFocusPlugin /> */}
-          {/* <CodeHighlightPlugin /> */}
-          {/* <ListPlugin /> */}
+          <ListPlugin />
           <LinkPlugin />
           <AutoLinkPlugin />
-          {/* <ListMaxIndentLevelPlugin maxDepth={7} /> */}
           <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
         </div>
       </div>

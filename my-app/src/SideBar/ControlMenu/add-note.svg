@@ -1,14 +1,4 @@
-<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
-
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="32" width="32" y="-1" x="-1"/>
- </g>
- <g>
-  <title>Layer 1</title>
-  <path stroke="#000" id="svg_1" d="m2.574965,7.553763l4.961675,-4.950292l19.888394,0l0,24.793058l-24.850068,0l0,-19.842766z" stroke-opacity="null" stroke-width="4" fill="none"/>
-  <line stroke="#000" stroke-width="4" stroke-linecap="null" stroke-linejoin="null" id="svg_3" y2="21.310079" x2="15" y1="8.689922" x1="15" fill-opacity="null" stroke-opacity="null" fill="none"/>
-  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="15" x2="21.548987" y1="15" x1="8.451013" fill-opacity="null" stroke-opacity="null" stroke-width="4" fill="none"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+  <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
 </svg>

@@ -10,6 +10,9 @@
 
 .add-note-button {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   padding: 0;
@@ -17,16 +20,10 @@
   border: 0;
   background: none;
   cursor: pointer;
-  transition: background-color .1s ease-in-out;
+  transition: background-color .05s ease-in-out;
   border-radius: 5px;
 }
 
 .add-note-button:hover {
-  background-color: #9090901c;
-}
-
-.add-note-button svg {
-  position: absolute;
-  left: 0;
-  top: 0;
+  background-color: #efefef;
 }
