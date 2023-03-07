@@ -12,8 +12,6 @@ export function ContentArea() {
     saveToLocalStorage(notes);
   }, [notes])
 
-  console.log(notes)
-
   return <div className='content-area-container'>
     {notes.length !== 0 ? notes.map(el => {
       return <ShortNote note={el} key={el.id}/>

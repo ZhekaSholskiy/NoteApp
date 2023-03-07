@@ -23,7 +23,12 @@ export function TitleEditor() {
                 changeTitle(updatedNote);
                 setActiveNote(updatedNote);
             }}
-            onKeyUp={(e) => e.key === 'Enter' && document.getElementById('note-body-editor')?.focus()}
+            onKeyUp={(e) => {
+              if (e.key === 'Enter') {
+                const editingBodyArea = document.getElementsByClassName('editor-input')[0] as HTMLElement;
+                editingBodyArea.focus();
+              }
+            }}
              />
     </div>
   );

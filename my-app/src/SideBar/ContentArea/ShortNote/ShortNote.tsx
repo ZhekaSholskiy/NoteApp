@@ -13,11 +13,11 @@ export function ShortNote(props: {note: INote}) {
   }
 
   useEffect(() => {
-    // если при удалении заметка открыта в окне редактирования, переключаемся на первую заметку в сторе
+    // если при удалении заметк открыта в окне редактирования, переключаемся на первую заметку в сторе
     if (!notes.includes(activeNote)) {
       setActiveNote(notes[0])
     }
-  }, [notes])
+  }, [notes.length])
 
   return (
     <div className={styles.container} onClick={() => setActiveNote(props.note)}>

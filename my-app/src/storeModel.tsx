@@ -1,9 +1,10 @@
 import { Action } from 'easy-peasy';
 import { createTypedHooks } from 'easy-peasy';
+import { EditorState, SerializedEditorState } from 'lexical';
 
 export interface INote {
   title: string,
-  body: string,
+  body?: string,
   id: string,
 }
 

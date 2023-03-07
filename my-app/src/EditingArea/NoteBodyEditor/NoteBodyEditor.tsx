@@ -1,5 +1,6 @@
 import styles from './notebodyeditor.module.css';
 import { INote, useStoreActions, useStoreState } from '../../storeModel';
+import LexicalEditor from './LexicalEditor/LexicalEditor';
 
 export function NoteBodyEditor() {
   const activeNote = useStoreState((state) => state.activeNote);
@@ -8,7 +9,7 @@ export function NoteBodyEditor() {
 
   return (
     <div className={styles.container}>
-        <textarea
+        {/* <textarea
          name=''
         className={styles.textarea}
                   placeholder='Здесь будет текст Вашей заметки'
@@ -24,7 +25,8 @@ export function NoteBodyEditor() {
                   }}
                   id='note-body-editor'
                   >
-        </textarea>
+        </textarea> */}
+        <LexicalEditor />
     </div>
   );
 }

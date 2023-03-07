@@ -11,7 +11,7 @@ const localStorageData = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KE
 if (!localStorageData) {
   const initialNote: INote = {
     title: 'Привет!',
-    body: 'Это приложение заметок. Здесь можно создавать новые заметки с помощью кнопки "Создать новую заметку" (плюс) в меню слева. В данной области можно редактировать существующие заметки.',
+    body: '{"root":{"children":[{"children":[{"detail":0,"format":0,"mode":"normal","style":"","text":"пустая заметка","type":"text","version":1}],"direction":"ltr","format":"","indent":0,"type":"paragraph","version":1}],"direction":"ltr","format":"","indent":0,"type":"root","version":1}}',
     id: generateId(),
   }
   window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([initialNote]));
