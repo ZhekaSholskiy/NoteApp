@@ -61,7 +61,6 @@ export default function LexicalEditor() {
     if (activeNote.id !== uniqActiveNote.id) {
       setUniqActiveNote(activeNote);
     }
-    console.log(activeNote)
   }, [activeNote])
 
   return (

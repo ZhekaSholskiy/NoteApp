@@ -2,8 +2,7 @@ import { createStore, action } from 'easy-peasy';
 import { INote, INotesModel } from './storeModel';
 import { generateId } from './utils/generateId';
 
-const LOCAL_STORAGE_KEY = 'noteApplication-qmvp-123f-1fh4-1s1d1';
-const localStorageData = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) as string);
+const LOCAL_STORAGE_KEY = 'noteApplication-qmvp-123f-1fh4-2h21-xh6p';
 
 export function firstNote() {
   const initialNote: INote = {
@@ -14,8 +13,10 @@ export function firstNote() {
   window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([initialNote]));
 }
 
+const getLocalData = () => JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) as string)
+
 // если это первый запуск приложения, выводим стандартную заметку
-if (!localStorageData) {
+if (!getLocalData()) {
   firstNote();
 }
 
@@ -24,8 +25,8 @@ export function saveToLocalStorage(notes: INote[]) {
 }
 
 export const store = createStore<INotesModel>({
-  notes: localStorageData,
-  activeNote: localStorageData[0],
+  notes: getLocalData(),
+  activeNote: getLocalData()[0],
   addNote: action((state, payload) => {
     state.notes.unshift(payload);
   }),
