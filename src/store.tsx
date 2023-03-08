@@ -2,8 +2,6 @@ import { createStore, action } from 'easy-peasy';
 import { INote, INotesModel } from './storeModel';
 import { generateId } from './utils/generateId';
 
-// localStorage.clear()
-
 const LOCAL_STORAGE_KEY = 'noteApplication-qmvp-123f-1fh4-1s1d1';
 const localStorageData = JSON.parse(window.localStorage.getItem(LOCAL_STORAGE_KEY) as string);
 
