@@ -9,3 +9,4 @@
 - Easy-peasy как стейт-менеджер;
 - Lexical для возможности редактирования текста;
 - react-custom-scrollbars для кастомизированного скроллбара;
+- https://icons.getbootstrap.com/ для svg иконок.
