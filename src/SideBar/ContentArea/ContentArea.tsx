@@ -15,9 +15,11 @@ export function ContentArea() {
 
   return <div className='content-area-container'>
     <Scrollbars renderThumbVertical={props => <div {...props} style={{backgroundColor: 'rgba(0, 0, 0, 0.1)', borderRadius: '3px'}} className="thumb-vertical"/>}>
-      {notes.length !== 0 ? notes.map(el => {
-      return <ShortNote note={el} key={el.id}/>
-      }) : 'Пока заметок нет'}
+      {notes.length !== 0
+          ? notes.map(el => {
+        return <ShortNote note={el} key={el.id}/>
+      })
+          : 'Пока заметок нет'}
     </Scrollbars>
   </div>
 }

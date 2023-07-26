@@ -9,12 +9,13 @@ export function TitleEditor() {
 
   return (
     <div className={styles.container}>
-      <input type="text"
-             placeholder='Название заметки'
-             className={styles.input}
-             value={activeNote ? activeNote.title : ''}
-             id='title-editor'
-             onChange={(event) => {
+      <input
+          type="text"
+          placeholder='Название заметки'
+          className={styles.input}
+          value={activeNote ? activeNote.title : ''}
+          id='title-editor'
+          onChange={(event) => {
                 const updatedNote: INote = {
                   title: event?.target.value,
                   body: activeNote.body,
@@ -28,8 +29,7 @@ export function TitleEditor() {
                 const editingBodyArea = document.getElementsByClassName('editor-input')[0] as HTMLElement;
                 editingBodyArea.focus();
               }
-            }}
-             />
+            }}/>
     </div>
   );
 }
