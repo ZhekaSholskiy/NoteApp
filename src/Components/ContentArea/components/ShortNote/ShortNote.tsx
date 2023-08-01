@@ -2,7 +2,7 @@ import styles from './shortnote.module.css';
 import { useEffect } from 'react';
 import {INote} from "../../../../types";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteNote, setActiveNote} from "../../../../Views/App/store/notesSlice";
+import {deleteNote, setActiveNote} from "../../../../Views/Editor/store/notesSlice";
 import {RootState} from "../../../../reduxStore";
 
 export function ShortNote(props: {note: INote}) {

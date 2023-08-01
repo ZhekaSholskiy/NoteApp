@@ -4,7 +4,7 @@ import './contentarea.css';
 import { Scrollbars } from 'react-custom-scrollbars';
 import {RootState} from "../../reduxStore";
 import {useSelector} from "react-redux";
-import {saveToLocalStorage} from "../../Views/App/store/notesSlice";
+import {saveToLocalStorage} from "../../Views/Editor/store/notesSlice";
 
 export function ContentArea() {
   const notes = useSelector((state: RootState) => state.notes.notes);

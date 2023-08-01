@@ -1,7 +1,7 @@
 import { generateId } from '../../utils/generateId';
 import './controlmenu.css'
 import {useDispatch} from "react-redux";
-import {addNote, setActiveNote} from "../../Views/App/store/notesSlice";
+import {addNote, setActiveNote} from "../../Views/Editor/store/notesSlice";
 
 export function ControlMenu() {
   const dispatch = useDispatch();

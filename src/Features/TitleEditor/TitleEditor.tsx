@@ -3,7 +3,7 @@ import {ReactElement} from "react";
 import {INote} from "../../types";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../reduxStore";
-import {changeNoteTitle, setActiveNote} from "../../Views/App/store/notesSlice";
+import {changeNoteTitle, setActiveNote} from "../../Views/Editor/store/notesSlice";
 
 export const TitleEditor = ():ReactElement => {
   const activeNote = useSelector((state: RootState) => state.notes.activeNote);

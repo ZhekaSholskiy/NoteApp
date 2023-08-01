@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+.app-container__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}

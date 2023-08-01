@@ -6,7 +6,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import {ArrowForwardIos} from "@mui/icons-material";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../reduxStore";
-import {addNote, initialNote} from "../../Views/App/store/notesSlice";
+import {addNote, initialNote} from "../../Views/Editor/store/notesSlice";
 
 export function EditingArea() {
     const notes = useSelector((state: RootState) => state.notes.notes);

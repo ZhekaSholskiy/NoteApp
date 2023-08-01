@@ -23,7 +23,7 @@ import { EditorState } from "lexical";
 import {INote} from "../../../types";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../../reduxStore";
-import {changeNoteBody, setActiveNote} from "../../../Views/App/store/notesSlice";
+import {changeNoteBody, setActiveNote} from "../../../Views/Editor/store/notesSlice";
 
 function Placeholder() {
   return <div className="editor-placeholder">Введите текст...</div>;

@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit'
-import notesReducer from './Views/App/store/notesSlice';
+import notesReducer from './Views/Editor/store/notesSlice';
 
 export const reduxStore = configureStore({
     reducer: {
