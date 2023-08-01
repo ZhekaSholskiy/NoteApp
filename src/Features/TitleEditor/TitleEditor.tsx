@@ -1,11 +1,13 @@
 import styles from './titleeditor.module.css';
-import { INote, useStoreActions, useStoreState } from '../../storeModel';
-import { useEffect } from 'react';
+import {ReactElement} from "react";
+import {INote} from "../../types";
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "../../reduxStore";
+import {changeNoteTitle, setActiveNote} from "../../Views/App/store/notesSlice";
 
-export function TitleEditor() {
-  const activeNote = useStoreState((state) => state.activeNote);
-  const setActiveNote = useStoreActions((actions) => actions.setActiveNote);
-  const changeTitle = useStoreActions((actions) => actions.changeNoteTitle);
+export const TitleEditor = ():ReactElement => {
+  const activeNote = useSelector((state: RootState) => state.notes.activeNote);
+  const dispatch = useDispatch();
 
   return (
     <div className={styles.container}>
@@ -21,8 +23,8 @@ export function TitleEditor() {
                   body: activeNote.body,
                   id: activeNote.id,
                 }
-                changeTitle(updatedNote);
-                setActiveNote(updatedNote);
+                dispatch(changeNoteTitle(updatedNote));
+                dispatch(setActiveNote(updatedNote));
             }}
             onKeyUp={(e) => {
               if (e.key === 'Enter') {

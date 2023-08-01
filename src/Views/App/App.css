@@ -3,7 +3,8 @@
 }
 
 .app-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   position: fixed;
     left: 0;
     right: 0;

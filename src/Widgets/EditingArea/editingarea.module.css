@@ -24,3 +24,17 @@
 .giveMeInstruction:hover {
   opacity: 0.6;
 }
+
+.hideIcon svg {
+  transform: rotate(90deg);
+}
+
+.mainAreaContainer {
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-template-columns: 1fr;
+}
+
+.mainAreaContainerShowed .hideIcon svg {
+  transform: rotate(-90deg);
+}

@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
-import { useStoreState } from '../../storeModel';
-import { ShortNote } from './ShortNote';
+import { ShortNote } from './components/ShortNote';
 import './contentarea.css';
-import { saveToLocalStorage } from '../../store';
 import { Scrollbars } from 'react-custom-scrollbars';
+import {RootState} from "../../reduxStore";
+import {useSelector} from "react-redux";
+import {saveToLocalStorage} from "../../Views/App/store/notesSlice";
 
 export function ContentArea() {
-  const notes = useStoreState((state) => state.notes);
+  const notes = useSelector((state: RootState) => state.notes.notes);
 
   // при любых изменениях записок в стейт-менедеже, сохраняем их в localStorage
   useEffect(() => {
@@ -14,7 +15,13 @@ export function ContentArea() {
   }, [notes])
 
   return <div className='content-area-container'>
-    <Scrollbars renderThumbVertical={props => <div {...props} style={{backgroundColor: 'rgba(0, 0, 0, 0.1)', borderRadius: '3px'}} className="thumb-vertical"/>}>
+    <Scrollbars
+        renderThumbVertical={props => {
+          return <div
+              {...props}
+              style={{backgroundColor: 'rgba(0, 0, 0, 0.1)', borderRadius: '3px'}}
+              className="thumb-vertical"/>
+        }}>
       {notes.length !== 0
           ? notes.map(el => {
         return <ShortNote note={el} key={el.id}/>

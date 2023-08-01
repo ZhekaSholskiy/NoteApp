@@ -1,0 +1,23 @@
+.sidebar-container {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 1fr 40px;
+  height: 100%;
+  width: 25%;
+  min-width: 250px;
+  padding-top: 30px;
+  background-color: white;
+}
+
+.sidebar-container__hide-icon {
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+}
+
+.sidebar-container--opened .sidebar-container__hide-icon {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  transform: rotate(180deg);
+}

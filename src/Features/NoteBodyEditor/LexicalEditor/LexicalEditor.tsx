@@ -20,7 +20,10 @@ import {OnChangePlugin} from '@lexical/react/LexicalOnChangePlugin';
 import AutoLinkPlugin from "./plugins/AutoLinkPlugin";
 import { useEffect, useRef, useState } from "react";
 import { EditorState } from "lexical";
-import { INote, useStoreActions, useStoreState } from "../../../storeModel";
+import {INote} from "../../../types";
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "../../../reduxStore";
+import {changeNoteBody, setActiveNote} from "../../../Views/App/store/notesSlice";
 
 function Placeholder() {
   return <div className="editor-placeholder">Введите текст...</div>;
@@ -52,9 +55,8 @@ const editorConfig = {
 
 export default function LexicalEditor() {
   const editorStateRef = useRef<EditorState>();
-  const activeNote = useStoreState((state) => state.activeNote);
-  const setActiveNote = useStoreActions((actions) => actions.setActiveNote);
-  const changeBody = useStoreActions((actions) => actions.changeNoteBody);
+  const activeNote = useSelector((state: RootState) => state.notes.activeNote);
+  const dispatch = useDispatch();
   const [uniqActiveNote, setUniqActiveNote] = useState(activeNote);
 
   useEffect(() => {
@@ -81,8 +83,8 @@ export default function LexicalEditor() {
                 body: serState,
                 id: activeNote.id,
               }
-              changeBody(updatedNote);
-              setActiveNote(updatedNote);
+              dispatch(changeNoteBody(updatedNote));
+              dispatch(setActiveNote(updatedNote));
             }}/>
           <HistoryPlugin />
           <ListPlugin />

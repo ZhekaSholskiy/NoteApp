@@ -6,3 +6,7 @@
   width: 100%;
   padding-left: 10px;
 }
+
+.content-area-container div div:first-child::-webkit-scrollbar {
+  width: 20px;
+}
